@@ -1,0 +1,47 @@
+body {
+  margin: auto;
+  background: url('./images/background4.jpg') no-repeat fixed;
+  background-size: auto;
+  color: dimgray;
+  font-family: 'Montserrat', sans-serif;
+  overflow: auto;
+}
+/* HEADER STYLE CSS */
+header {
+  background-color: whitesmoke;
+  opacity: 80%;
+  border-radius: 30px;
+  border-left: dashed 1px dimgray;
+  border-right: dashed 1px dimgray;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  vertical-align: middle;
+  max-height: 100%;
+  margin: 0;
+}
+#storeinfo {
+  text-align: center;
+  padding: 3px;
+}
+nav {
+  border-bottom: 0.1px solid lightgray;
+  border-bottom-style: dashed;
+}
+nav a {
+  display: block;
+  text-align: center;
+}
+nav a:visited {
+  color: #c86b85;
+}
+h1 {
+  margin-top: 10px;
+  text-align: center;
+}
+input[type='submit'],
+input[type='reset'] {
+  margin: 5px;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <title>Lilian's Store</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--HEADER: Contains My Store Logo and store name-->
+      <header>
+        <div id="logo">
+          <img src="images/logo2.png" alt="store logo" />
+        </div>
+        <div id="storeinfo"><h4>JEWELRY STORE</h4></div>
+      </header>
+      <!-- TOP NAV:Contains HOME, contact us, sign in, wishlist and cart -->
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: none;">
+        <a id="home-link" class="navbar-brand" href="index2.html"
+          ><i class="material-icons">home</i><br />HOME</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a id="contact-us" class="nav-link" href="contact2.html"
+              ><i class="material-icons">contact_support</i><br />
+              CONTACT US
+            </a>
+            <a id="signin" class="nav-link" href="#"
+              ><i class="material-icons">account_circle</i><br />
+              SIGN IN</a
+            >
+            <a id="wishlist" class="nav-link" href="#"
+              ><i class="material-icons">favorite</i><br />
+              WISHLIST</a
+            >
+            <a id="cart" class="nav-link" href="#"
+              ><i class="material-icons">shopping_cart</i><br />
+              CART</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!--ASIDE: Menu bar for products categories-->
+      <aside class="menu">
+        <ul>
+          <li id="all-items"><a href="#">All ITEMS</a></li>
+          <li id="rings"><a href="#">RINGS</a></li>
+          <li id="earrings"><a href="#">EARRINGS</a></li>
+          <li id="necklaces"><a href="#">NECKLACES</a></li>
+          <li id="others"><a href="#">OTHERS</a></li>
+          <!--A dropdown menu for sorting products by price-->
+          <li class="dropdown" id="sort">
+            <a class="dropbtn" href="#">SORT BY PRICE</a>
+            <div class="dropdown-menu">
+              <a id="sort-desc" href="#">HIGH TO LOW</a>
+              <a id="sort-asc" href="#">LOW TO HIGH</a>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!--MAIN: Main content: products information cards listed here-->
+      <main>
+        <section id="summary">
+          <h2 id="welcome">W E L C O M E</h2>
+        </section>
+        <!-- When homepage loaded, a welcome image will show up-->
+        <!-- When user clicks on any of the categories above, the content will become all products cards-->
+        <!-- Including products image, name, description, formatted price-->
+        <section id="content">
+          <h4 id="welcome-msg">Find Your Beloved Jewelry Here</h4>
+        </section>
+        <!-- This is a pop up window div for user to click and view enlarged images-->
+        <div id="popupWindow">
+          <!-- large version of the image -->
+          <img id="popupImage" src="./images/" alt="loading..." />
+          <div class="close">X</div>
+        </div>
+        <div id="popupbg"></div>
+      </main>
+
+      <!-- Back to top button -->
+      <div id="backTop">
+        <a href="#logo"
+          ><img src="./images/back.svg" alt="back to top" /><br />
+          TOP
+        </a>
+      </div>
+      <!-- FOOTER: includes social media platforms for the store, and subscription form-->
+      <footer>
+        <div class="row">
+          <form
+            id="subscribe-form"
+            class="text-dark form-row"
+            action="https://formspree.io/f/xnqobezz"
+            method="POST"
+          >
+            <div id="social-link" class="col">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img src="./images/facebook.svg" alt="facebook"
+              /></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img src="./images/instagram.svg" alt="instagram"
+              /></a>
+              <a href="https://twitter.com/?lang=en" target="_blank"
+                ><img src="./images/twitter.svg" alt="twitter"
+              /></a>
+              <a href="https://www.tiktok.com/en/" target="_blank"
+                ><img src="./images/tiktok.svg" alt="tiktok"
+              /></a>
+            </div>
+            <div id="input-email" class="col form-group" style="text-align: end;">
+              <input
+                class="form-control bg-light"
+                id="subs"
+                type="email"
+                name="subs"
+                autocomplete="email"
+                autofocus
+                style="width: auto;"
+                placeholder="enteryour@email.com"
+              />
+            </div>
+            <div id="submit-email" class="col form-group" style="text-align: end;">
+              <input class="btn btn-secondary" type="submit" value="Subscribe" />
+            </div>
+          </form>
+        </div>
+      </footer>
+    </div>
+    <!-- Includes all script files -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="dataset.js"></script>
+    <script src="ui.js"></script>
+    <script src="util.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
