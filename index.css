@@ -55,22 +55,23 @@ aside ul li {
   color: dimgray;
   margin: auto;
 }
-aside li a {
+aside ul li a {
   color: dimgray;
   display: block;
   padding: 8px 0px 8px 8px;
   text-decoration: none;
 }
-aside li a:visited {
+aside ul li a:visited {
   color: #c86b85;
 }
-aside li a:hover {
+aside ul li a:hover {
   background-color: dimgray;
   color: #ffe2e2;
   border-radius: 3px;
 }
 /* DROPDOWN SORTING MENU*/
 #sort {
+  color: dimgray;
   width: 100%;
   display: inline-block;
 }
