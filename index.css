@@ -75,9 +75,6 @@ aside ul li a:hover {
   width: 100%;
   display: inline-block;
 }
-#sort a {
-  color: dimgray;
-}
 .dropbtn {
   color: white;
   border: none;
