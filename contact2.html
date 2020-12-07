@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="contact2.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--HEADER: Contains My Store Logo and store name-->
+      <header>
+        <div id="logo">
+          <img src="images/logo2.png" alt="store logo" />
+        </div>
+        <div id="storeinfo"><h4>JEWELRY STORE</h4></div>
+      </header>
+      <!--NAV: Contains HOME, contact us, sign in, wishlist and shopping cart-->
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: none;">
+        <a id="home-link" class="navbar-brand" href="index.html"
+          ><i class="material-icons">home</i><br />HOME</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a id="contact-us" class="nav-link" href="contact2.html"
+              ><i class="material-icons">contact_support</i><br />
+              CONTACT US
+            </a>
+            <a id="signin" class="nav-link" href="#"
+              ><i class="material-icons">account_circle</i><br />
+              SIGN IN</a
+            >
+            <a id="wishlist" class="nav-link" href="#"
+              ><i class="material-icons">favorite</i><br />
+              WISHLIST</a
+            >
+            <a id="cart" class="nav-link" href="#"
+              ><i class="material-icons">shopping_cart</i><br />
+              CART</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <h1>Contact Form</h1>
+      <!-- The form should submit to https://httpbin.org/post using the POST method,  -->
+      <!-- and only allow the user to submit when all data has been entered and there aren't any validation errors. -->
+      <form id="contact-form" class="text-dark" action="https://httpbin.org/post" method="POST">
+        <!-- First & Last name on the same form row -->
+        <div class="row">
+          <div class="col form-group">
+            <label for="first-name"><span class="text-danger">*</span>First Name</label
+            ><input
+              class="form-control "
+              id="first-name"
+              type="text"
+              name="first-name"
+              autocomplete="given-name"
+              autofocus
+              tabindex="1"
+              required
+            />
+          </div>
+          <div class="col form-group">
+            <label for="last-name"><span class="text-danger">*</span>Last Name</label
+            ><input
+              class="form-control bg-light"
+              id="last-name"
+              type="text"
+              name="last-name"
+              autocomplete="family-name"
+              autofocus
+              tabindex="2"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <label for="email"><span class="text-danger">*</span>Email Address</label
+            ><input
+              class="form-control bg-light"
+              id="email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              tabindex="3"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <label for="address"><span class="text-danger">*</span>Address</label>
+            <input
+              class="form-control bg-light"
+              id="address"
+              type="text"
+              name="address"
+              autocomplete="address-level2"
+              tabindex="4"
+              required
+            />
+          </div>
+        </div>
+        <!-- City & Postal code on the same row -->
+        <div class="row">
+          <div class="col form-group">
+            <label for="city"><span class="text-danger">*</span>City</label
+            ><input
+              class="form-control bg-light"
+              id="city"
+              type="text"
+              name="city"
+              list="city-list"
+              tabindex="5"
+              required
+            />
+            <datalist id="city-list">
+              <option value="Ottawa"></option>
+              <option value="Edmonton"></option>
+              <option value="Victoria"></option>
+              <option value="Winnipeg"></option>
+              <option value="Fredericton"></option>
+              <option value="St. John's"></option>
+              <option value="Halifax"></option>
+              <option value="Toronto"></option>
+              <option value="Charlottetown"></option>
+              <option value="Quebec City"></option>
+              <option value="Regina"></option>
+              <option value="Yellowknife"></option>
+              <option value="Iqaluit"></option>
+              <option value="Whitehorse"></option>
+            </datalist>
+          </div>
+          <div class="col form-group">
+            <label for="postal-code"><span class="text-danger">*</span>Postal Code</label
+            ><input
+              class="form-control bg-light"
+              id="postal-code"
+              type="text"
+              name="postal-code"
+              autocomplete="postal-code"
+              placeholder="M2M 0C2"
+              pattern="^[A-Za-z]\d[A-Za-z][ -]\d[A-Za-z]\d$"
+              tabindex="6"
+              required
+            />
+            <div class="invalid-feedback">
+              Enter a valid Canadian Postal Code
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <label for="option"><span class="text-danger">*</span>What is your problem?</label
+            ><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input "
+                type="radio"
+                name="option"
+                id="question"
+                value="question"
+                tabindex="7"
+                required
+                onclick="inputOrder(1)"
+              />
+              <label class="form-check-label" for="question">Question </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="option"
+                id="comment"
+                value="comment"
+                tabindex="8"
+                onclick="inputOrder(1)"
+              />
+              <label class="form-check-label" for="comment">Comment </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="option"
+                id="order-problem"
+                value="order-problem"
+                tabindex="9"
+                onclick="inputOrder(0)"
+              />
+              <label class="form-check-label" for="order-problem">Order Problem </label>
+            </div>
+          </div>
+        </div>
+        <div id="order-input" style="display: none;" class="row">
+          <div class="col form-group">
+            <label for="order-number">Order Number</label>
+            <input
+              class="form-control bg-light"
+              id="order-number"
+              type="text"
+              name="order-number"
+              maxlength="10"
+              tabindex="10"
+              pattern="[0-9]{10}"
+            />
+            <small class="form-text text-muted">Your order number must be 10 digits long</small>
+            <div class="invalid-feedback">
+              Enter a 10 digit order number only
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <label for="feedback"><span class="text-danger">*</span>Feedback</label><br />
+            <textarea
+              class="form-control bg-light"
+              name="feedback"
+              id="feedback"
+              rows="10"
+              tabindex="11"
+              placeholder="Tell us your questions or comments..."
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-group">
+            <div class="d-flex mr-2">
+              <input class="btn btn-primary btn-lg" type="submit" value="Submit" tabindex="12" />
+              <input class="btn btn-secondary btn-lg" type="reset" value="Reset" tabindex="13" />
+            </div>
+          </div>
+        </div>
+    </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script>
+      //function only when user click order problem, display the order number input row
+      function inputOrder(x) {
+        if (x == 0) {
+          document.getElementById('order-input').style.display = 'block';
+        } else {
+          document.getElementById('order-input').style.display = 'none';
+        }
+      }
+
+      window.onload = function() {
+        let form = document.getElementById('contact-form');
+        let alertBox = document.getElementById('invalid-form');
+        //when user submits the form, run this function to check if it is valid
+        form.onsubmit = function(event) {
+          //step 1. check if the form is valid (i.e., has all required elements)
+          if (!form.checkValidity()) {
+            //update the css for the form to show the error messages
+            form.classList.add('was-validated');
+            event.preventDefault();
+            return false;
+          }
+          return true;
+        };
+      };
+    </script>
+  </body>
+</html>
