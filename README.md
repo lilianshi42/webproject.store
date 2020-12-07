@@ -1,6 +1,6 @@
 # webproject.store
 
-This Webpage is an experimental project for WEB222 assignment 5. 
+This Webpage is an experimental project for WEB222 final project. 
 
 I have not developed the functions for search bar, sign in, wishlist, shopping cart functions yet. 
 
